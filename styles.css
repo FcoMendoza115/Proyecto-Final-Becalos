@@ -1,70 +1,73 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #0d5bc2, #c611eb); /* Degradado horizontal */
+  padding: 10px 20px;
+}
+
+
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 20px; /* Tamaño texto Barra */
+}
+
+.navbar a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+.logo img {
+  height: 100px; /* Tamaño Logo*/
+  width: auto;
+}
+
+.navbar .nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  margin-left: 10px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
     background-color: #333;
-    padding: 10px 20px;
-  }
-
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-  }
-
-  .navbar a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-  }
-
-  .navbar .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-
-  .navbar .nav-links {
-    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 0;
   }
 
   .nav-links a {
-    margin-left: 10px;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #575757;
   }
 
   .menu-toggle {
-    display: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: white;
+    display: block;
   }
 
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: #333;
-      position: absolute;
-      top: 60px;
-      left: 0;
-    }
-
-    .nav-links a {
-      margin: 0;
-      padding: 10px;
-      text-align: center;
-      border-top: 1px solid #ffffff;
-    }
-
-    .menu-toggle {
-      display: block;
-    }
-
-    .nav-links.active {
-      display: flex;
-    }
+  .nav-links.active {
+    display: flex;
   }
+}
